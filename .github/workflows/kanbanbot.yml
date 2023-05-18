@@ -36,4 +36,5 @@ jobs:
         run: |
           cd kanbanbot/
           cat $GITHUB_EVENT_PATH
+          echo "Event type: ${{ github.event_name }}"
           php bin/console app:github:on-github-event $GITHUB_EVENT_PATH
